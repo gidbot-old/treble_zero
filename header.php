@@ -7,7 +7,6 @@
 	<?php wp_head(); ?>
 </head>
 
-<--! Custom YouTube Script -->
 
 <script>
 	(function() {
@@ -18,6 +17,7 @@
 			p.onclick = labnolIframe;
 			v[n].appendChild(p);
 		}
+		console.log('video added');
 	})();
 
 	function labnolThumb(id) {
