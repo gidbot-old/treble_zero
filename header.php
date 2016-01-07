@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
+
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body <?php
@@ -20,25 +22,21 @@ body_class( $body_classes );
 
 
 <script>
-	(function() {
-		var v = document.getElementsByClassName("youtube-player");
-		for (var n = 0; n < v.length; n++) {
+	$(function() {
+		//var v=document.getElementsByClassName("youtube-player");
+		 $( ".youtube-player" ).each(function() {
 			var p = document.createElement("div");
-			p.innerHTML = labnolThumb(v[n].dataset.id);
-			console.log('Inner HTML: ', p.innerHTML);
+			p.innerHTML = labnolThumb(this.dataset.id);
 			p.onclick = labnolIframe;
-			v[n].appendChild(p);
-			console.log('video added');
-		}
-	})();
+			this.appendChild(p);
+		});
+	});
 
 	function labnolThumb(id) {
-		console.log('Img - Loaded');
 		return '<img class="youtube-thumb" src="//i.ytimg.com/vi/' + id + '/hqdefault.jpg"><div class="play-button"></div>';
 	}
 
 	function labnolIframe() {
-		console.log('Img - Clicked');
 		var iframe = document.createElement("iframe");
 		iframe.setAttribute("src", "//www.youtube.com/embed/" + this.parentNode.dataset.id + "?autoplay=1&autohide=2&border=0&wmode=opaque&enablejsapi=1&controls=0&showinfo=0");
 		iframe.setAttribute("frameborder", "0");
