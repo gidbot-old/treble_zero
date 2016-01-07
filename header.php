@@ -50,7 +50,7 @@ body_class( $body_classes );
 	.youtube-container { display: block; margin: 20px auto; width: 100%; max-width: 600px; }
 	.youtube-player { display: block; width: 100%; /* assuming that the video has a 16:9 ratio */ padding-bottom: 56.25%; overflow: hidden; position: relative; width: 100%; height: 100%; cursor: hand; cursor: pointer; display: block; }
 	img.youtube-thumb { bottom: 0; display: block; left: 0; margin: auto; max-width: 100%; width: 100%; position: absolute; right: 0; top: 0; height: auto }
-	div.play-button { height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; background: url("http://i.imgur.com/TxzC70f.png") no-repeat; }
+	div.play-button { height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; background: url("http://blog.treble.fm/wp-content/uploads/2016/01/treble-play-button-2.png") no-repeat; }
 	#youtube-iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 </style>
 
