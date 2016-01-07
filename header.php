@@ -7,6 +7,17 @@
 	<?php wp_head(); ?>
 </head>
 
+<body <?php
+
+$body_classes = array();
+$body_classes[] = 'side-menu-closed';
+$body_classes[] = 'no-js';
+$body_classes[] = ffThemeOptions::getQuery('post posts-opening');
+
+body_class( $body_classes );
+
+?>>
+
 
 <script>
 	(function() {
@@ -33,9 +44,6 @@
 	}
 </script>
 
-<--! End Custom YouTube Script -->
-
-<--! Custom YouTube CSS -->
 
 <style>
 	.youtube-container { display: block; margin: 20px auto; width: 100%; max-width: 600px; }
@@ -45,20 +53,6 @@
 	#youtube-iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 </style>
 
-<--! End Custom YouTube CSS -->
-
-
-
-<body <?php
-
-$body_classes = array();
-$body_classes[] = 'side-menu-closed';
-$body_classes[] = 'no-js';
-$body_classes[] = ffThemeOptions::getQuery('post posts-opening');
-
-body_class( $body_classes );
-
-?>>
 	<?php get_template_part('templates/blocks/loader-1/loader-1'); // needs to be first in body ?>
 	<div class="master-wrapper">
 		<header class="header">
