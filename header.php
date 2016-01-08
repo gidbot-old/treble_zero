@@ -5,8 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
-
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body <?php
@@ -20,11 +18,10 @@ body_class( $body_classes );
 
 ?>>
 
-
 <script>
 	$(function() {
 		//var v=document.getElementsByClassName("youtube-player");
-		 $( ".youtube-player" ).each(function() {
+		$( ".youtube-player" ).each(function() {
 			var p = document.createElement("div");
 			p.innerHTML = labnolThumb(this.dataset.id);
 			p.onclick = labnolIframe;
@@ -53,6 +50,7 @@ body_class( $body_classes );
 	div.play-button { height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; background: url("http://blog.treble.fm/wp-content/uploads/2016/01/treble-play-button-2.png") no-repeat; }
 	#youtube-iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 </style>
+
 
 	<?php get_template_part('templates/blocks/loader-1/loader-1'); // needs to be first in body ?>
 	<div class="master-wrapper">

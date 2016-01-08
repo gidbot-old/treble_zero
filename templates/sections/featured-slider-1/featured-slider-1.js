@@ -46,8 +46,8 @@
 				direction: 'horizontal',
 				grabCursor: true,
 				effect: 'slide',
-				prevButton: '.swiper-arrow__left',
-				nextButton: '.swiper-arrow__right',
+				prevButton: '.featured-slider-1--id--' + index + ' .swiper-arrow__left',
+				nextButton: '.featured-slider-1--id--' + index + ' .swiper-arrow__right',
 				loop: true,
 				runCallbacksOnInit: false, // must-have for loop:true
 				// speed: 400,
@@ -77,7 +77,6 @@
 						setTimeout(function() {
 							$("html, body").animate({ scrollTop: swiperContainerOffset - mobileHeaderHeight + 1}, 300); // +1
 						}, 320);
-						
 					} else {
 
 						setTimeout(function() {

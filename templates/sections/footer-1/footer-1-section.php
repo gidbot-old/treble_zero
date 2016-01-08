@@ -15,8 +15,7 @@ $s->startSection('primary');
 
 			$s->startSection('widgets', ffOneSection::TYPE_REPEATABLE_VARIABLE);
 				$s->startSection('one-widget', ffOneSection::TYPE_REPEATABLE_VARIATION)
-					->addParam('section-name', __('Footer Widget', 'zero') );
-
+					->addParam('section-name', __('Footer Column - Widget Area', 'zero') );
 					$s->addOption(ffOneOption::TYPE_SELECT, 'xs', __('Width for Phones and up', 'zero') , '12')
 						->addSelectValue( __( 'Default', 'zero'), '')
 						->addSelectValue( '1 / 12', 1)

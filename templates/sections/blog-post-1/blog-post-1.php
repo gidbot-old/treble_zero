@@ -48,6 +48,7 @@ if( is_page() ){
 								<?php the_subtitle(); ?>
 							</a>
 						</h4>
+
 						<?php if( $query->get('show-read-more') ){ ?>
 						<div class="post-collapser">
 							<a class="read-more-button post-expand-toggle" href="<?php the_permalink(); ?>">
@@ -120,14 +121,15 @@ if( is_page() ){
 					</div>
 					<div class="post-expander">
 
+						<?php if( is_singular() or ( 'posts-opening-closing-disabled no-post-content-in-archives' != ffThemeOptions::getQuery('post posts-opening') ) ) { ?>
 						<div class="post-content"><?php
 							the_content( $query->get('read-more') );
 							wp_link_pages();
-                            if( is_page() && ( 'page-template-contact.php' == get_page_template_slug( get_the_ID() ) ) ){
+							if( is_page() && ( 'page-template-contact.php' == get_page_template_slug( get_the_ID() ) ) ){
 								get_template_part('templates/blocks/contact-form-1/contact-form-1');
 							}
 						?></div>
-
+						<?php } ?>
 
 						<?php if ( 'portfolio' == get_post_type( get_the_ID() ) AND !$queryPortfolio->get('single_portfolio_post_footer') ) { ?>
 

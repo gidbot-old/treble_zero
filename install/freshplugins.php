@@ -8,4 +8,7 @@ $freshplugins = array(
 	'fresh-performance-cache',
 	'fresh-scrollbar',
 	'fresh-sidebar-manager',
+	'fresh-favicon',
+	'fresh-file-editor',
+	'fresh-performance-cache',
 );

@@ -159,7 +159,20 @@
 		/*----------------------------------------------------------*/
 		/* EXPAND THIS SECTION AT SINGULAR VIEW
 		 /*----------------------------------------------------------*/
-		if ( $('body').is('.posts-opening-closing-disabled, .page, .single, .posts-opened, .search-no-results, .error404')){
+
+
+		if ( $('body').is('.posts-opening-closing-disabled') ) {
+			if ( $('body').is('.page, .single, .posts-opened, .search-no-results, .error404') ){
+				$postExpander.slideDown(0);
+				$postCollapser.slideUp(0);
+			}else if ( $('body').is('.no-post-content-in-archives') ) {
+				$postExpander.slideUp(0);
+				$postCollapser.slideDown(0);
+			} else {
+				$postExpander.slideDown(0);
+				$postCollapser.slideUp(0);
+			}
+		}else if ( $('body').is('.page, .single, .posts-opened, .search-no-results, .error404') ){
 			$postExpander.slideDown(0);
 			$postCollapser.slideUp(0);
 		} else {

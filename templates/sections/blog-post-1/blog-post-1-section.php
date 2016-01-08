@@ -8,10 +8,11 @@ $s->startSection('post');
 
 		$s->addElement( ffOneElement::TYPE_TABLE_DATA_START, '', __('Post expanding/collapsing in category view', 'zero') );
 			$s->addOption(ffOneOption::TYPE_SELECT, 'posts-opening', '', 'post-cookie-opening')
-				->addSelectValue( __('Disable expanding and collapsing', 'zero') , 'posts-opening-closing-disabled')
 				->addSelectValue( __('Always expanded between page reloads', 'zero') , 'posts-opened')
 				->addSelectValue( __('Always collapsed between page reloads', 'zero') , 'post-closed')
 				->addSelectValue( __('Use cookies to remember which posts are expanded/collapsed between page reloads', 'zero') , 'post-cookie-opening')
+				->addSelectValue( __('Disable expanding and collapsing - show post content', 'zero') , 'posts-opening-closing-disabled')
+				->addSelectValue( __('Disable expanding and collapsing - do not show content (no content)', 'zero') , 'posts-opening-closing-disabled no-post-content-in-archives')
 				;
 		$s->addElement( ffOneElement::TYPE_TABLE_DATA_END );
 
