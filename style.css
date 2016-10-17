@@ -30,10 +30,7 @@ NOTE: THE REST OF THE CSS IS DIVIDED INTO LOGICAL BLOCKS IN THIS FOLDER: /templa
 */
 
 /* GENERAL */
-/*@font-face {*/
-	/*font-family: Walsheim-Bold;*/
-	/*src: url('fonts/gt-walsheim-black-web.ttf');*/
-/*}*/
+/*
 @font-face {
 	font-family: Walsheim-Light;
 	src: url('http://blog.treble.fm/wp-content/uploads/useanyfont/151211045721walsheim-light.woff');
@@ -42,6 +39,12 @@ NOTE: THE REST OF THE CSS IS DIVIDED INTO LOGICAL BLOCKS IN THIS FOLDER: /templa
 @font-face {
 	font-family: Walsheim-Medium;
 	src: url('http://blog.treble.fm/wp-content/uploads/useanyfont/151211045757walsheim-medium.woff');
+}
+*/
+
+
+.blog-post-1.ff-section .post-footer a {
+    color: #C5172A !important;
 }
 
 html,

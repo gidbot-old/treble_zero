@@ -29,6 +29,17 @@ body_class( $body_classes );
 			p.onclick = labnolIframe;
 			this.appendChild(p);
 		});
+
+		var links = $('a[href="http://www.treble.fm/"]'); 
+		links.each(function(){
+			$(this).attr('target', '_blank');
+			
+			$(this).click(function() {
+				$(this).trigger('mouseout');
+			});
+			
+		});
+
 	});
 
 	function labnolThumb(id) {
@@ -46,6 +57,10 @@ body_class( $body_classes );
 
 
 <style>
+	.blog-post-1.ff-section .post-footer a {
+  		color: #C5172A !important;
+	}
+
 	.youtube-container { display: block; margin: 20px auto; width: 100%; max-width: 600px; }
 	.youtube-player { display: block; width: 100%; /* assuming that the video has a 16:9 ratio */ padding-bottom: 56.25%; overflow: hidden; position: relative; width: 100%; height: 100%; cursor: hand; cursor: pointer; display: block; }
 	img.youtube-thumb { bottom: 0; display: block; left: 0; margin: auto; max-width: 100%; width: 100%; position: absolute; right: 0; top: 0; height: auto }
